@@ -4,7 +4,7 @@ import {
 } from './ui'
 
 describe('Thread action', () => {
-  it(``, () => {
-    
+  it(`should return an object with type 'TOGGLE_MESSAGE_DETAIL'`, () => {
+    expect(toggleMessageDetail().type).toEqual('TOGGLE_MESSAGE_DETAIL')
   })
 })

@@ -3,15 +3,18 @@ const sum = (a, b) => a + b
 const substract = (a, b) => a - b
 
 function it(message, callback) {
-  /* Task:
-    - console.log the message
-    - Execute the callback
-    - Catch the error if the callback throw an error and display the error message
-    - Bonus, add emojis 😋
-  */
+  console.log(message);
+  try {
+    callback()
+  } catch(e) {
+    console.log("Oh no. You blew it 😵")
+    console.log(e.message)
+  }
 }
 
 function describe(message, callback) {
+  console.log(message)
+  callback()
   /* Task:
     - console.log the message
     - Execute the callback
@@ -21,7 +24,7 @@ function describe(message, callback) {
 describe('Testing sum',() => {
   it('sum 2 and 1 should be 3', () => {
     actual = sum(2,1)
-    expect(actual).toBe(4)
+    expect(actual).toBe(3)
   })
 })
 

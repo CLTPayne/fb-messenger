@@ -63,7 +63,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "node scripts/build.js",
     "build": "npm-run-all build-css build-js",
-    "t2": "node scripts/test.js --env=jsdom --silent --verbose --noStackTrace --runInBand"
+    "t2": "node scripts/test.js --env=jsdom --silent --verbose --noStackTrace --runInBand",
+    "test": "jest"
   },
   "babel": {
     "presets": [
@@ -109,7 +110,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "babel-jest": "^23.4.2",
     "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.1"
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.5.0"
   }
 }

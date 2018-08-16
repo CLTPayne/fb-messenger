@@ -3,6 +3,13 @@ const sum = (a, b) => a + b
 const substract = (a, b) => a - b
 
 function test(message, callback) {
+  console.log(message);
+  try {
+    callback()
+  } catch(e) {
+    console.log("Oh no. You blew it 😵")
+    console.log(e.message)
+  }
   /* Task:
     - console.log the message
     - Execute the callback

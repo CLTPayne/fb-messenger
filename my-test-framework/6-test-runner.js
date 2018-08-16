@@ -8,12 +8,13 @@ const fs = require('fs')
 
 const files = fs.readdirSync('./my-test-framework')
 
-/*
-Task, iterate over the files array and if the file name includes the sufix
-'.test.js' then require the file. You can use the following snipet to check if
-the file contains the sufix '.test.js' and if so require the file:
 
-if(file.includes('.test.js')) {
-  const test = require(`./${file}`)
-}
-*/
+// Task, iterate over the files array and if the file name includes the sufix
+// '.test.js' then require the file. You can use the following snipet to check if
+// the file contains the sufix '.test.js' and if so require the file:
+
+files.map(file => {
+  if(file.includes('.test.js')) {
+    const test = require(`./${file}`)
+  }
+})
